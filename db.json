@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "image": "1.jpg",
+      "name": "Футболка: Demon",
+      "price": 700,
+      "article": "T1",
+      "available": true,
+      "category": "Мужские"
+    },
+    {
+      "image": "2.jpg",
+      "name": "Футболка: Classic Black",
+      "price": 200,
+      "article": "T2",
+      "available": true,
+      "category": "Женские"
+    },
+    {
+      "image": "3.jpg",
+      "name": "Футболка: Be Kind",
+      "price": 420,
+      "article": "T3",
+      "available": false,
+      "category": "Женские"
+    },
+    {
+      "image": "4.jpg",
+      "name": "Футболка: Jocker",
+      "price": 530,
+      "article": "T4",
+      "available": true,
+      "category": "Мужские"
+    },
+    {
+      "image": "5.jpg",
+      "name": "Футболка: Flowers",
+      "price": 650,
+      "article": "T5",
+      "available": false,
+      "category": "Женские"
+    },
+    {
+      "image": "6.jpg",
+      "name": "Футболка: Friends",
+      "price": 870,
+      "article": "T6",
+      "available": true,
+      "category": "Женские"
+    }
+  ]
+}
