@@ -6,7 +6,7 @@
       "price": 700,
       "article": "T1",
       "available": true,
-      "category": "Мужские"
+      "category": "Male"
     },
     {
       "image": "2.jpg",
@@ -14,7 +14,7 @@
       "price": 200,
       "article": "T2",
       "available": true,
-      "category": "Женские"
+      "category": "Female"
     },
     {
       "image": "3.jpg",
@@ -22,7 +22,7 @@
       "price": 420,
       "article": "T3",
       "available": false,
-      "category": "Женские"
+      "category": "Female"
     },
     {
       "image": "4.jpg",
@@ -30,7 +30,7 @@
       "price": 530,
       "article": "T4",
       "available": true,
-      "category": "Мужские"
+      "category": "Male"
     },
     {
       "image": "5.jpg",
@@ -38,7 +38,7 @@
       "price": 650,
       "article": "T5",
       "available": false,
-      "category": "Женские"
+      "category": "Female"
     },
     {
       "image": "6.jpg",
@@ -46,7 +46,15 @@
       "price": 870,
       "article": "T6",
       "available": true,
-      "category": "Женские"
+      "category": "Female"
+    },
+    {
+      "image": "7.jpg",
+      "name": "Свитшот: Light Gray",
+      "price": 1200,
+      "article": "T7",
+      "available": true,
+      "category": "Male"
     }
   ]
 }

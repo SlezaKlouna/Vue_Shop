@@ -7,3 +7,20 @@ body{
 h1{
   text-transform: uppercase;
 }
+
+.btn{
+  padding: $padding $padding*5;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1.5px solid $primaryColor;
+  transition: .3s ease-out;
+
+  &:hover {
+    background: $primaryColor;
+    color: $btnTextColor;
+    outline: 2px solid $primaryColor;
+    outline-offset: 3px;
+    transition: .3s ease-out;
+  }
+}
