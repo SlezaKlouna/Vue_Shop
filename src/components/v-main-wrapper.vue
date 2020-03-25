@@ -5,6 +5,7 @@
             {{title}}
             <span class="v-main-wrapper__title-span">&#10084;</span>
         </p>
+        <v-header/>
         <keep-alive>
             <router-view></router-view>
         </keep-alive>
@@ -13,9 +14,11 @@
 </template>
 
 <script>
+    import VHeader from "./layouts/v-header";
 
     export default {
         name: 'v-main-wrapper',
+        components: {VHeader},
         props: {}, // то что прилетает из родителя
         data(){ // персональные данные
             return{
@@ -32,7 +35,7 @@
 
 <style lang="scss">
     .v-main-wrapper{
-        max-width: 900px;
+        max-width: 1000px;
         margin: 0 auto;
 
         &__title{

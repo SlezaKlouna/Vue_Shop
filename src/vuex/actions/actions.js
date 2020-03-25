@@ -1,6 +1,9 @@
 // import axios from "axios";
 
 export default {
+    GET_SEARCH_VALUE({commit}, value){
+        commit('SET_SEARCH_VALUE', value)
+    },
     ADD_TO_CART({commit}, product){
         commit('SET_CART', product)
     },

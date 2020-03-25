@@ -3,7 +3,7 @@
         <img class="v-cart-item__image" :src="require('../../assets/images/' + cart_item_data.image)">
         <div class="v-cart-item__info">
             <p>{{cart_item_data.name}}</p>
-            <p>{{cart_item_data.price}}</p>
+            <p>{{cart_item_data.price | toFix | formattedPrice}}</p>
             <p>{{cart_item_data.article}}</p>
         </div>
         <div class="v-cart-item__quantity">
@@ -14,34 +14,44 @@
             </span>
 
         </div>
-        <button @click="deleteFromCart" class="v-cart-item__delete delete-btn">Delete </button>
+        <button
+                @click="deleteFromCart"
+                class="v-cart-item__delete delete-btn"
+        >Delete
+        </button>
     </div>
 </template>
 
 <script>
+    import toFix from "../../filters/toFix";
+    import formattedPrice from "../../filters/price-format";
 
     export default {
         name: "v-cart-item",
         props: {
-            cart_item_data:{
+            cart_item_data: {
                 type: Object,
-                default(){
+                default() {
                     return {}
                 }
             }
         },
-        data(){
+        data() {
             return {}
         },
+        filters: {
+            toFix,
+            formattedPrice
+        },
         computed: {},
-        methods:{
-            decrementItem(){
+        methods: {
+            decrementItem() {
                 this.$emit('decrement')
             },
-            incrementItem(){
+            incrementItem() {
                 this.$emit('increment')
             },
-            deleteFromCart(){
+            deleteFromCart() {
                 this.$emit('deleteFromCart')
             }
         },
@@ -53,7 +63,7 @@
 
 <style lang="scss">
 
-    .v-cart-item{
+    .v-cart-item {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
@@ -62,11 +72,11 @@
         padding: $padding * 2;
         margin-bottom: $margin * 2;
 
-        &__image{
+        &__image {
             max-width: 50px;
         }
 
-        .delete-btn{
+        .delete-btn {
             border: none;
             padding: $padding $padding*5;
             text-transform: uppercase;
@@ -78,24 +88,26 @@
                 transition: .3s ease-out;
             }
         }
-        .quantity__btn{
+
+        .quantity__btn {
             cursor: pointer;
             padding: 3px 15px;
             background: $quantityBtn;
             font-size: 18px;
 
-            &:hover{
+            &:hover {
                 background: darken($quantityBtn, 40);
                 color: $btnTextColor;
             }
         }
 
-        .inc{
+        .inc {
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
             margin-left: 10px;
         }
-        .dec{
+
+        .dec {
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
             margin-right: 10px;
