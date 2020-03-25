@@ -14,7 +14,7 @@
             <router-link :to="{name: 'catalog'}">
                 <p class="nav-menu__link">Catalog</p>
             </router-link>
-            <router-link :to="{name: 'cart'}">
+            <router-link :to="{name: 'cart', params: {cart_data: CART}}">
                 <p class="nav-menu__link"> cart </p>
             </router-link>
         </div>
@@ -56,7 +56,9 @@
         },
         computed: {
           ...mapGetters([
-              'SEARCH_VALUE'
+              'SEARCH_VALUE',
+              'PRODUCTS',
+              'CART',
           ])
         },
         methods: {
@@ -146,9 +148,9 @@
             cursor: pointer;
             outline: none;
             transition: .3s;
-            position: fixed;
-            top: 160px;
-            left: 10%;
+            /*position: fixed;*/
+            /*top: 160px;*/
+            /*left: 10%;*/
 
             &:hover{
                 background: $primaryColor;
